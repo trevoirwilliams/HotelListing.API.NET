@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using HotelListing.API.Data;
-using HotelListing.API.Models.Country;
-using HotelListing.API.Models.Hotel;
+using HotelListing.API.NET5.Data;
+using HotelListing.API.NET5.Models.Country;
+using HotelListing.API.NET5.Models.Hotel;
 
-namespace HotelListing.API.Configurations
+namespace HotelListing.API.NET5.Configurations
 {
     public class MapperConfig : Profile
     {
@@ -15,7 +15,6 @@ namespace HotelListing.API.Configurations
             CreateMap<Country, UpdateCountryDto>().ReverseMap();
 
             CreateMap<Hotel, HotelDto>().ReverseMap();
-            CreateMap<Hotel, CreateHotelDto>().ReverseMap();
 
         }
     }

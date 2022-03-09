@@ -1,6 +1,6 @@
 using System;
 
-namespace HotelListing.API.NET5
+namespace HotelListing.API.NET5.NET5
 {
     public class WeatherForecast
     {
