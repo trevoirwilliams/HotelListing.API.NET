@@ -46,6 +46,10 @@ namespace HotelListing.API.Core.Middleware
                     statusCode = HttpStatusCode.NotFound;
                     errorDetails.ErrorType = "Not Found";
                     break;
+                case BadRequestException badRequestException:
+                    statusCode = HttpStatusCode.BadRequest;
+                    errorDetails.ErrorType = "Bad Request";
+                    break;
                 default:
                     break;
             }

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using HotelListing.API.Core.Exceptions;
 using System.Diagnostics.Metrics;
+using HotelListing.API.Core.Models.Hotel;
 
 namespace HotelListing.API.Core.Repository
 {
@@ -115,8 +116,13 @@ namespace HotelListing.API.Core.Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync<TSource>(int id, TSource source)
+        public async Task UpdateAsync<TSource>(int id, TSource source) where TSource : IBaseDto
         {
+            if (id != source.Id)
+            {
+                throw new BadRequestException("Invalid Id used in request");
+            }
+
             var entity = await GetAsync(id);
 
             if(entity == null)

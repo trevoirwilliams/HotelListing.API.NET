@@ -59,11 +59,6 @@ namespace HotelListing.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHotel(int id, HotelDto hotelDto)
         {
-            if (id != hotelDto.Id)
-            {
-                return BadRequest("Invalid Id used in request");
-            }
-
             try
             {
                 await _hotelsRepository.UpdateAsync(id, hotelDto);
