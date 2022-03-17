@@ -11,6 +11,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
 	</ItemGroup>
+	
    <ItemGroup>
 	  <ProjectReference Include="..\HotelListing.Data\HotelListing.API.Data.csproj" />
 	</ItemGroup>
