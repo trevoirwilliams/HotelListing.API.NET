@@ -2,7 +2,7 @@
 
 namespace HotelListing.API.Core.Models.Hotel
 {
-    public abstract class BaseHotelDto : IBaseDto
+    public abstract class BaseHotelDto
     {
         [Required]
         public string Name { get; set; }
@@ -15,6 +15,5 @@ namespace HotelListing.API.Core.Models.Hotel
         [Required]
         [Range(1, int.MaxValue)]
         public int CountryId { get; set; }
-        public int Id { get; set; }
     }
 }
