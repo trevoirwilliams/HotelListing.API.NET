@@ -1,7 +1,7 @@
 # Hotel Listing API
 .NET Core 6 Hotel Listing Web API for [Ultimate ASP.NET Web API Development Guide](https://www.udemy.com/course/ultimate-aspnet-5-web-api-development-guide/?referralCode=354D04A638A9196767B3)
 
-An Educational Web API built using .NET Core 6 
+An Educational Web API built using .NET Core 
 
 By doing this course, you will:
 - Build a fully data driven REST Web API using cutting edge technology 
