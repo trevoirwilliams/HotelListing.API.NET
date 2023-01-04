@@ -91,12 +91,13 @@ namespace HotelListing.API.Core.Repository
 
         public async Task<T> GetAsync(int? id)
         {
-            if (id is null)
+            var result = await _context.Set<T>().FindAsync(id);
+            if (result is null)
             {
-                return null;
+                throw new NotFoundException(typeof(T).Name, id.HasValue ? id : "No Key Provided");
             }
 
-            return await _context.Set<T>().FindAsync(id);
+            return result;
         }
 
         public async Task<TResult> GetAsync<TResult>(int? id)
